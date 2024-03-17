@@ -3,7 +3,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 // const express = require('express');
 const path = require("path");
 // const app = express();
