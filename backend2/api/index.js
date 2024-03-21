@@ -49,13 +49,19 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.set("view engine", "ejs");
+// Set 'views' directory for any views
+// being rendered res.render()
+app.set("views", path.join(__dirname, "views"));
+
+// Set view engine as EJS
+app.engine("html", require("ejs").renderFile);
+app.set("view engine", "html");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // Define routes
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index.ejs");
 });
 
 app.post("/submit", (req, res) => {
