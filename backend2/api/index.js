@@ -18,7 +18,7 @@ require("dotenv").config({
 
 const PORT = process.env.PORT || 3000;
 
-app.use("/backend2/public", express.static(path.join(__dirname, "public")));
+app.use("../backend2/public", express.static(path.join(__dirname, "public")));
 
 console.log(process.env.PORT);
 console.log(process.env.MONGODB_URI);

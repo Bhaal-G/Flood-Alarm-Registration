@@ -7,9 +7,9 @@
     "node": "18.x"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "node /LANGUAGES/CivilProject/backend2/api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "dev": "nodemon /LANGUAGES/CivilProject/backend2/api/index.js"
   },
   "author": "",
   "license": "ISC",
