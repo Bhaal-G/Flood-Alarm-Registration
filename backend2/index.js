@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
+const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // const express = require('express');
@@ -15,7 +16,6 @@ require("dotenv").config({
   path: "config.env",
 });
 
-const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use("/backend2/public", express.static(path.join(__dirname, "public")));
