@@ -42,8 +42,8 @@ const User = mongoose.model("civilPrj", userSchema);
 
 // Nodemailer transporter setup
 const transporter = nodemailer.createTransport({
-  // service: "gmail",
-  host: "ssl0.ovh.net", //mail.example.com (your server smtp)
+  service: "gmail",
+  // host: "gmail", //mail.example.com (your server smtp)
   port: 587, //2525 (specific port)
   secureConnection: true, //true or false
   auth: {
