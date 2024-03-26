@@ -80,7 +80,9 @@ app.post("/submit", (req, res) => {
     .then(() => {
       // Data saved successfully
       sendConfirmationEmail(req.body.email);
-      res.send("Data saved to database and confirmation email sent.");
+      res.send(
+        "<h1 style='font-size: 40px; text-align: center;'>Data Saved to DataBase</h1>"
+      );
     })
     .catch((err) => {
       // Handle error
