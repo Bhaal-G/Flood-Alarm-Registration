@@ -6,21 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple MongoDB Website</title>
     <link rel="stylesheet" type="text/css" href="/style.css">.
-    <script>
-        function validateEmail() {
-            var email = document.getElementById("email").value;
-            var confirmEmail = document.getElementById("confirmemail").value;
 
-            console.log(email);
-            console.log(confirmEmail);
-
-            if (email !== confirmEmail) {
-                alert("Email and confirm email do not match.");
-                return false;
-            }
-            return true;
-        }
-    </script>
 </head>
 
 <body>
@@ -40,6 +26,7 @@
 
         <label for="location">Location:</label>
         <select id="location" name="location" required>
+            <option value="Chengalpattu">Select One</option>
             <option value="Chengalpattu">Chengalpattu</option>
             <option value="Chennai">Chennai</option>
             <option value="Kanchipuram">Kanchipuram</option>

@@ -104,9 +104,8 @@ function sendConfirmationEmail(email) {
     to: email,
     subject: "Registration Confirmation",
     text: `Dear Resident,\n
-    Thank you for verifying your e-mail address, your registration at our website (NAME OF WEBSITE)
+    Thank you for verifying your e-mail address, your registration at our website 
     is now complete, all the further communications shall be sent to this e-mail address.\n
-    
     When the Indian Meteorological Department (IMD) issues a coastal flood warning for the areas near
     Adyar basin a flood watch by us shall be provided.\n
     A flood watch means changing weather conditions which can bring high potential for flash floods and
