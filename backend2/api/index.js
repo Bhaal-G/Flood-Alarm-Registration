@@ -68,6 +68,13 @@ app.get("/", (req, res) => {
 });
 
 app.post("/submit", (req, res) => {
+  const { name, phoneNumber, email, confirmemail, location } = req.body;
+
+  // Check if email and confirm email match
+  if (email !== confirmemail) {
+    return res.status(400).send("Email and confirm email do not match.");
+  }
+
   const newUser = new User({
     name: req.body.name,
     phoneNumber: req.body.phoneNumber,
@@ -81,7 +88,7 @@ app.post("/submit", (req, res) => {
       // Data saved successfully
       sendConfirmationEmail(req.body.email);
       res.send(
-        "<h1 style='font-size: 40px; text-align: center;'>Data Saved to DataBase</h1>"
+        "<h1 style='font-size: 40px; text-align: center;'>Data Saved to Database Successfully</h1>"
       );
     })
     .catch((err) => {
